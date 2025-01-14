@@ -1,5 +1,5 @@
 # Arthropod taxonomy 
-The purpose of these notebooks is to classify images of arthropods into one of 7 broad categories (taxonomical orders). Three algorithms are compared: Support Vector Machine, Multilayer Perceptron and Random Forest. The classifiers are implemented in Python using the Scikit-Learn library (Pedregosa et al., 2011). For each classifier, optimal parameters are determined using grid search. The results are evaluated in terms of accuracy and execution speed.
+The purpose of these notebooks is to classify images of arthropods into one of 7 broad categories (taxonomical orders). The classifier is implemented in Python applying transfer learning using the MobileNetV3Small pre-trained model and the Keras library (Chollet et al., 2015). The results are evaluated in terms of accuracy.
 
 ## Setup
 Clone the repo
@@ -30,13 +30,17 @@ jupyter lab
 ## Notebooks
 
 ### [Process data](00_process_data.ipynb)
-* Reformat the images
-* Create feature matrix
+* Crop and reformat the images
+* Save the prepared images
 
+### [Classify](01_transfer.ipynb)
+* Load pre-trained model
+* Fit the model
+* Evaluate
 
 ## References
 
  Geir Drange (2020). Arthropod Taxonomy Orders Object Detection Dataset. Kaggle. https://doi.org/10.34740/KAGGLE/DSV/1240192
 
- Pedregosa et al. (2011), Scikit-learn: Machine Learning in Python, JMLR 12, pp. 2825-2830.
+ Chollet, F. et al. (2015), Keras, https://keras.io.
  
